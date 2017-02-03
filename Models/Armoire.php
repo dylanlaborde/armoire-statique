@@ -27,7 +27,7 @@ class Armoire {
 		$i = new self();
 		$getId = $i->getInstance()
 		->where("id",$id)
-		->find_one();
+		->find_many();
 		return $getId;
 	}
 } 
