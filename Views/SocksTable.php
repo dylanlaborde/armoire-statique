@@ -6,15 +6,15 @@
 	<title>Document</title>
 </head>
 <body>
-<div class="ui grid">
-	<div class="six wide column"></div>
-<h1>Mes chaussettes </h1>
-</div>
 	<div class="ui grid">
-	<div class="four wide column"></div>
+		<div class="six wide column"></div>
+		<h1>Mes chaussettes </h1>
+	</div>
+	<div class="ui grid">
+		<div class="four wide column"></div>
 		
-			<table class="ui collapsing striped table">
-				<thead>
+		<table class="ui collapsing striped table">
+			<thead>
 				
 				<tr>
 					<th>Id </th>
@@ -23,6 +23,7 @@
 					<th>description</th>		
 					<th>couleur </th>		
 					<th>date_lavage</th>	
+					<th></th>
 				</tr>		
 			</thead>
 
@@ -37,13 +38,16 @@
 						<td><?= $armoires->description?></td>
 						<td><?= $armoires->couleur?></td>
 						<td><?= $armoires->date_lavage?></td>
+						<td>
+							<a href="?id=<?= $armoires->id?>" class="ui primary button">Détail</a>
+						</td>
 					</tr>
 
 				<?php endforeach ?>
 			</tbody>
 		</table>
 
-</div>
+	</div>
 
 
 </body>
