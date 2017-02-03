@@ -6,14 +6,17 @@
 	<title>Detail</title>
 </head>
 <body>
-		
+	
 	<div class="ui grid">
-	<div class="six wide column"></div>
-<h1>Detail </h1>
-</div>
-<a href="/index.php">return to Home</a>
+		<div class="seven wide column"></div>
+		<h1>Detail </h1>
+	</div>
+
 	<div class="ui grid">
-		<div class="four wide column"></div>
+		<div class="four wide column">
+			<a href="/index.php" class="ui labeled button icon"><i class="home icon"></i>return to Home</a>
+			
+		</div>
 		
 		<table class="ui collapsing striped table">
 			<thead>
@@ -25,6 +28,7 @@
 				<th>description</th>		
 				<th>couleur </th>		
 				<th>date_lavage</th>	
+				<th></th>
 			</tr>		
 		</thead>
 		<tbody>
@@ -38,11 +42,14 @@
 					<td><?= $socksIDs->description?></td>
 					<td><?= $socksIDs->couleur?></td>
 					<td><?= $socksIDs->date_lavage?></td>
+	<td>
+		<a href="?action=edit&id=<?= $socksIDs->id?>" class="ui primary button">Editer</a>
+	</td>
 				</tr>
-
 			<?php endforeach ?>
 		</tbody>
 	</table>
+
 </div>
 
 </body>
