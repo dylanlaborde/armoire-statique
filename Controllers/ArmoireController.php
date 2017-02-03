@@ -11,5 +11,12 @@ class ArmoireController extends Armoire{
 		$socksID = Armoire::get($_GET["id"]);
 		require 'Views/detail.php';
 	}
+	public function edit(){
+		$socksID = Armoire::get($_GET["id"]);
+		foreach ($socksID as $key ) {
+			
+		require 'Views/edit.php';
+		}
+	}
 }
 ?>
